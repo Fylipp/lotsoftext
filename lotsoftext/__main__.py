@@ -36,9 +36,6 @@ with zipfile.ZipFile(output_target, 'w', zipfile.ZIP_DEFLATED) as zip_file:
                 continue
 
             filename = f'{i}.json'
-            if filename in zip_file.namelist():
-                continue
-
             json_data = json.dumps(article, default=lambda o: o.__dict__)
             zip_file.writestr(filename, json_data)
 
