@@ -22,10 +22,10 @@ Download a high quantity of text by grabbing it off of Wikipedia
 optional arguments:
   -h, --help            show this help message and exit
   --output OUTPUT, -o OUTPUT
-                        the target output file
+                        the target output file, defaults to ./lotsoftext.zip
   --limit LIMIT, -l LIMIT
-                        a limit for the amount of articles to download, 0 to
-                        wait for keyboard interrupt, default 10,000
+                        a limit for the amount of articles to download, by
+                        default no limit is set
 ```
 
 ## License
