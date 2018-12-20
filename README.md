@@ -1,16 +1,18 @@
 # lotsoftext
 
 Download a high quantity of text by grabbing it off of Wikipedia.
-
 The output is a ZIP file with JSON files for every article.
+
+Process can be interupted with CTRL-C which will properly close the file.
+If the target file already exists it is simply appended.
 
 ## Output schema
 
-| Field   | Description                  |
-| ------- | ---------------------------- |
-| `url`   | URL of article               |
-| `title` | Title of article             |
-| `text`  | Pure text content of article |
+| Field      | Description                                         |
+| ---------- | --------------------------------------------------- |
+| `url`      | URL of article                                      |
+| `title`    | Title of article                                    |
+| `content`  | Pure text content of article (sanitized whitespace) |
 
 ## Usage
 

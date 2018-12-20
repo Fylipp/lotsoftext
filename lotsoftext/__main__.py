@@ -23,8 +23,10 @@ print()
 
 with zipfile.ZipFile(output_target, 'a', zipfile.ZIP_DEFLATED) as zip_file:
     try:
+        names = zip_file.namelist()
+
         # Odd numeric iteration to accommodate for failed attempts and initial offset
-        i_off = len(zip_file.namelist())
+        i_off = len(names)
         i = 1
         while True:
             if 0 < limit == i + 1:
@@ -39,6 +41,12 @@ with zipfile.ZipFile(output_target, 'a', zipfile.ZIP_DEFLATED) as zip_file:
                 continue
 
             filename = f'{abs(hash(article.url))}.json'
+
+            if filename in names:
+                print('Article already present in archive')
+                continue
+            names.append(filename)
+
             json_data = json.dumps(article, default=lambda o: o.__dict__)
             zip_file.writestr(filename, json_data)
 
