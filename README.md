@@ -30,6 +30,24 @@ optional arguments:
                         default no limit is set
 ```
 
+## Single file output
+
+As a utility script the `pack.py` script is included. It combines all articles downloaded previously and combines them into a single file. By default the separator is a single space, however this can be switched to a newline. The general usage is as follows:
+
+```
+usage: pack.py [-h] [--newline] [--input INPUT] [--output OUTPUT]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --newline, -n         use newline as separator between articles
+  --input INPUT, -i INPUT
+                        zip file containing downloaded articles
+  --output OUTPUT, -o OUTPUT
+                        file to dump content in
+```
+
+
+
 ## License
 
 MIT.
