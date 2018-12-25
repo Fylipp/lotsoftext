@@ -36,6 +36,7 @@ As a utility script the `pack.py` script is included. It combines all articles d
 
 ```
 usage: pack.py [-h] [--newline] [--input INPUT] [--output OUTPUT]
+               [--unidecode]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -44,6 +45,7 @@ optional arguments:
                         zip file containing downloaded articles
   --output OUTPUT, -o OUTPUT
                         file to dump content in
+  --unidecode, -u       transform to ascii
 ```
 
 
